@@ -40,7 +40,8 @@ const NotificationItem = ({ status, date, title, description, onClick }) => {
             <div className='accordion__content--desc'>
               {description
                 .replace(/<\/?p[^>]*>/g, '')
-                .replace(/<\/?b[^>]*>/g, '')}
+                .replace(/<\/?b[^>]*>/g, '')
+                .replace(/<\/?a[^>]*>/g, '')}
             </div>
           </div>
         )}
