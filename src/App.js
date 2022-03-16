@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { notifications } from './utils/content';
 import NotificationItem from './NotificationItem';
 import moment from 'moment';
+import Information from './Information';
 
 const App = () => {
   const [content, setContent] = useState(notifications);
@@ -32,6 +33,7 @@ const App = () => {
             />
           ))}
       </div>
+      <div>{content.length === 0 ? <Information /> : null}</div>
     </main>
   );
 };
