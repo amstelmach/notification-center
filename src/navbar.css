@@ -1,0 +1,12 @@
+.navbar {
+  height: 80px;
+  background-color: #fefefe;
+}
+
+.logo__container {
+  margin: 0 10%;
+}
+
+.logo__container img {
+  width: 150px;
+}
