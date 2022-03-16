@@ -40,6 +40,7 @@ button.button {
   padding: 0.5rem 2rem;
   margin: 2rem auto;
   background-color: #fefefe;
+  cursor: pointer;
 }
 
 .accordion__content--desc {
