@@ -25,3 +25,8 @@ body {
   font-size: 1.2rem;
   font-weight: 700;
 }
+
+main .notification__container {
+  width: 80%;
+  margin: 0 auto;
+}
