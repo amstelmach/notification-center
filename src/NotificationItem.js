@@ -14,14 +14,21 @@ const NotificationItem = ({ status, date, title, description, onClick }) => {
           onClick={() => setIsActive(!isActive)}
         >
           <div className='accordion__status'>
-            {status === 'new' ? <StatusDot height={15} /> : null}
+            {status === 'new' ? (
+              <StatusDot height={15} width={25} fill={'#daecf0'} />
+            ) : null}
           </div>
           <div className='accordion__date'>{date}</div>
           <div className='accordion__title'>{title}</div>
           {isActive ? (
-            <ChevronUp width={30} height={30} />
+            <ChevronUp width={30} height={30} className='accordion__chevron' />
           ) : (
-            <ChevronDown width={30} height={30} />
+            <ChevronDown
+              width={30}
+              height={30}
+              className='accordion__chevron'
+              fill={'#e5e5e5'}
+            />
           )}
         </div>
 
