@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { notifications } from './utils/content';
 import NotificationItem from './NotificationItem';
+import moment from 'moment';
 
 const App = () => {
   const [content, setContent] = useState(notifications);
@@ -14,7 +15,7 @@ const App = () => {
           <NotificationItem
             key={item.id}
             status={item.status}
-            date={item.date}
+            date={moment(item.date).format('DD.MM.YYYY')}
             title={item.title}
             description={item.desc}
             id={item.id}
