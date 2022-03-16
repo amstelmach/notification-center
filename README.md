@@ -1,4 +1,6 @@
-Available Scripts
+Notification Center
+
+User is able to display received notifications, see the details of each & delete if needed.
 
 In order to run the application, you can run:
 
