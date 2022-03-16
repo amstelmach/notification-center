@@ -1,0 +1,49 @@
+.accordion__item {
+  height: max-content;
+  width: 80vw;
+  background-color: #fefefe;
+  display: grid;
+  border: 1px solid #f8f6f1;
+  cursor: pointer;
+}
+
+.accordion__status {
+  text-align: center;
+}
+
+.accordion__header {
+  display: grid;
+  grid-template-columns: 5% 10% 80% 10%;
+  margin: 1rem 0;
+}
+
+.accordion__title {
+  margin-left: 1rem;
+  font-weight: 600;
+}
+
+.accordion__chervon {
+  margin-right: 1rem;
+}
+
+.accordion__content {
+  display: grid;
+  grid-template-columns: 15% 85%;
+  border: 1px solid #f8f6f1;
+}
+
+button.button {
+  border: 2px solid #e5e5e5;
+  font-weight: 600;
+  text-transform: capitalize;
+  height: fit-content;
+  padding: 0.5rem 2rem;
+  margin: 2rem auto;
+  background-color: #fefefe;
+}
+
+.accordion__content--desc {
+  line-height: 1.2rem;
+  font-size: 1rem;
+  margin: 2rem 3.5rem 2rem 1rem;
+}
