@@ -30,7 +30,11 @@ const NotificationItem = ({ status, date, title, description, onClick }) => {
             <button className='button' onClick={onClick}>
               delete
             </button>
-            <div className='accordion__content--desc'>{description}</div>
+            <div className='accordion__content--desc'>
+              {description
+                .replace(/<\/?p[^>]*>/g, '')
+                .replace(/<\/?b[^>]*>/g, '')}
+            </div>
           </div>
         )}
       </div>
