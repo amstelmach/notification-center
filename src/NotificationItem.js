@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './notificationitem.css';
+import ChevronDown from './utils/ChevronDown';
+import ChevronUp from './utils/ChevronUp';
 
 const NotificationItem = ({ status, date, title, description }) => {
   const [isActive, setIsActive] = useState(false);
@@ -13,7 +15,12 @@ const NotificationItem = ({ status, date, title, description }) => {
           <div className='accordion__status'>{status}</div>
           <div className='accordion__date'>{date}</div>
           <div className='accordion__title'>{title}</div>
-          <div>arrow</div>
+          {/* <div>arrow</div> */}
+          {isActive ? (
+            <ChevronUp width={30} height={30} />
+          ) : (
+            <ChevronDown width={30} height={30} />
+          )}
         </div>
 
         {isActive && (
