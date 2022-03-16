@@ -1,0 +1,7 @@
+.informationBox {
+  height: 4rem;
+  background-color: #fefefe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
