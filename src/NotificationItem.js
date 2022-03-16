@@ -3,7 +3,7 @@ import './notificationitem.css';
 import ChevronDown from './utils/ChevronDown';
 import ChevronUp from './utils/ChevronUp';
 
-const NotificationItem = ({ status, date, title, description }) => {
+const NotificationItem = ({ status, date, title, description, onClick }) => {
   const [isActive, setIsActive] = useState(false);
   return (
     <div className='wrapper'>
@@ -15,7 +15,6 @@ const NotificationItem = ({ status, date, title, description }) => {
           <div className='accordion__status'>{status}</div>
           <div className='accordion__date'>{date}</div>
           <div className='accordion__title'>{title}</div>
-          {/* <div>arrow</div> */}
           {isActive ? (
             <ChevronUp width={30} height={30} />
           ) : (
@@ -25,7 +24,9 @@ const NotificationItem = ({ status, date, title, description }) => {
 
         {isActive && (
           <div className='accordion__content'>
-            <button className='button'>delete</button>
+            <button className='button' onClick={onClick}>
+              delete
+            </button>
             <div className='accordion__content--desc'>{description}</div>
           </div>
         )}

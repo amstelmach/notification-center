@@ -5,6 +5,13 @@ import moment from 'moment';
 
 const App = () => {
   const [content, setContent] = useState(notifications);
+
+  const handleRemove = (id) => {
+    const newContent = [...content].filter((item) => item.id !== id);
+
+    setContent(newContent);
+  };
+
   return (
     <main>
       <div className='header__container'>
@@ -21,6 +28,7 @@ const App = () => {
               title={item.title}
               description={item.desc}
               id={item.id}
+              onClick={() => handleRemove(item.id)}
             />
           ))}
       </div>
