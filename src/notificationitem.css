@@ -7,28 +7,28 @@
   cursor: pointer;
 }
 
-.accordion__status {
-  text-align: center;
+.accordion__header {
+  display: flex;
+  margin: 1rem 0;
 }
 
-.accordion__header {
-  display: grid;
-  grid-template-columns: 5% 10% 80% 10%;
-  margin: 1rem 0;
+.accordion__date {
+  margin-left: 1rem;
 }
 
 .accordion__title {
   margin-left: 1rem;
   font-weight: 600;
+  margin-right: auto;
 }
 
-.accordion__chervon {
-  margin-right: 1rem;
+.accordion__chevron {
+  margin: 0 1rem;
 }
 
 .accordion__content {
-  display: grid;
-  grid-template-columns: 15% 85%;
+  display: flex;
+  /* grid-template-columns: 15% 85%; */
   border: 1px solid #f8f6f1;
 }
 
@@ -38,7 +38,7 @@ button.button {
   text-transform: capitalize;
   height: fit-content;
   padding: 0.5rem 2rem;
-  margin: 2rem auto;
+  margin: 2rem 1rem;
   background-color: #fefefe;
   cursor: pointer;
 }
@@ -47,4 +47,18 @@ button.button {
   line-height: 1.2rem;
   font-size: 1rem;
   margin: 2rem 3.5rem 2rem 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .accordion__content {
+    flex-direction: column-reverse;
+  }
+
+  .button.button {
+    margin: 1rem auto;
+  }
+
+  .accordion__content--desc {
+    margin: 1rem 1rem;
+  }
 }
